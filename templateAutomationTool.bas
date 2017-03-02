@@ -5,15 +5,25 @@ Sub runTemplateFix()
 '
 '
 
+' Introduction
 MsgBox "You have selected the Aurecon Template Automation Tool. Please click Ok to run"
 
+' Body Text
+templateFix_Body
+
+' Headings
 templateFix_Heading1
 templateFix_Heading2
+
+' Bullets
 templateFix_Bullet1
 templateFix_Bullet2
 templateFix_Bullet3
-templateFix_Body
 
+' General
+templateFix_Footer
+
+' Final Message
 MsgBox "Aurecon Template Automation Tool has finished. Please direct any feedback to David.Petrie@aurecongroup.com"
 
 End Sub
@@ -461,5 +471,78 @@ Attribute templateFix_Bullet3.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.tem
         .AutomaticallyUpdate = False
         .BaseStyle = "Normal"
         .NextParagraphStyle = "Bullet 3"
+    End With
+End Sub
+Sub templateFix_Footer()
+Attribute templateFix_Footer.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_Footer"
+'
+' templateFix_Footer Macro
+'
+'
+    With ActiveDocument.Styles("Footer").Font
+        .Name = "+Body"
+        .Size = 10
+        .Bold = False
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = wdColorAutomatic
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Body CS"
+        .BoldBi = False
+        .ItalicBi = False
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("Footer").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(0)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 0
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 0
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = False
+        .KeepTogether = False
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(0)
+        .OutlineLevel = wdOutlineLevelBodyText
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("Footer").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("Footer")
+        .AutomaticallyUpdate = False
+        .BaseStyle = "Normal"
+        .NextParagraphStyle = "Footer"
     End With
 End Sub
