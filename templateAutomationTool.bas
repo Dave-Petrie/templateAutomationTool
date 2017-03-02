@@ -17,6 +17,8 @@ templateFix_Heading2
 templateFix_Heading3
 templateFix_Heading4
 templateFix_Heading5
+templateFix_Heading6
+templateFix_Heading7
 
 ' Bullets
 templateFix_Bullet1
@@ -840,5 +842,151 @@ Attribute templateFix_Heading5.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.te
         .AutomaticallyUpdate = False
         .BaseStyle = "Normal"
         .NextParagraphStyle = "Body Text"
+    End With
+End Sub
+Sub templateFix_Heading6()
+Attribute templateFix_Heading6.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_Heading6"
+'
+' templateFix_Heading6 Macro
+'
+'
+    With ActiveDocument.Styles("Heading 6").Font
+        .Name = "+Headings"
+        .Size = 10
+        .Bold = True
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = wdColorAutomatic
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Headings CS"
+        .BoldBi = False
+        .ItalicBi = True
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("Heading 6").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(0)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 10
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 0
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = True
+        .KeepTogether = True
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(0)
+        .OutlineLevel = wdOutlineLevel6
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("Heading 6").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("Heading 6")
+        .AutomaticallyUpdate = False
+        .BaseStyle = "Normal"
+        .NextParagraphStyle = "Normal"
+    End With
+End Sub
+Sub templateFix_Heading7()
+Attribute templateFix_Heading7.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_Heading7"
+'
+' templateFix_Heading7 Macro
+'
+'
+    With ActiveDocument.Styles("Heading 7").Font
+        .Name = "+Headings"
+        .Size = 10
+        .Bold = True
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = -738131969
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Headings CS"
+        .BoldBi = False
+        .ItalicBi = True
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("Heading 7").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(0)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 10
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 0
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = True
+        .KeepTogether = True
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(0)
+        .OutlineLevel = wdOutlineLevel7
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("Heading 7").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("Heading 7")
+        .AutomaticallyUpdate = False
+        .BaseStyle = "Normal"
+        .NextParagraphStyle = "Normal"
     End With
 End Sub
