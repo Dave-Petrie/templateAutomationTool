@@ -5,8 +5,11 @@ Sub runTemplateFix()
 '
 '
 
+' Initialise Templates
+Application.Templates.LoadBuildingBlocks
+
 ' Introduction
-MsgBox "You have selected the Aurecon Template Automation Tool Ver 0.1.7 . Please click Ok to run"
+MsgBox "You have selected the Aurecon Template Automation Tool Ver 1.0.0 . Please click Ok to run"
 
 ' Body Text
 templateFix_Body
