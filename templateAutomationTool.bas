@@ -6,7 +6,7 @@ Sub runTemplateFix()
 '
 
 ' Introduction
-MsgBox "You have selected the Aurecon Template Automation Tool V0.1.3 . Please click Ok to run"
+MsgBox "You have selected the Aurecon Template Automation Tool V0.1.4 . Please click Ok to run"
 
 ' Body Text
 templateFix_Body
@@ -15,6 +15,8 @@ templateFix_Body
 templateFix_Heading1
 templateFix_Heading2
 templateFix_Heading3
+templateFix_Heading4
+templateFix_Heading5
 
 ' Bullets
 templateFix_Bullet1
@@ -689,6 +691,152 @@ Attribute templateFix_Heading3.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.te
     ActiveDocument.Styles("Heading 3").NoSpaceBetweenParagraphsOfSameStyle = _
         False
     With ActiveDocument.Styles("Heading 3")
+        .AutomaticallyUpdate = False
+        .BaseStyle = "Normal"
+        .NextParagraphStyle = "Body Text"
+    End With
+End Sub
+Sub templateFix_Heading4()
+Attribute templateFix_Heading4.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_Heading4"
+'
+' templateFix_Heading4 Macro
+'
+'
+    With ActiveDocument.Styles("Heading 4").Font
+        .Name = "+Body"
+        .Size = 10
+        .Bold = True
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = -721354753
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Headings CS"
+        .BoldBi = True
+        .ItalicBi = True
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("Heading 4").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(1.5)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 14.5
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 5.65
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = False
+        .KeepTogether = True
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(-1.5)
+        .OutlineLevel = wdOutlineLevel4
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("Heading 4").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("Heading 4")
+        .AutomaticallyUpdate = False
+        .BaseStyle = "Normal"
+        .NextParagraphStyle = "Body Text"
+    End With
+End Sub
+Sub templateFix_Heading5()
+Attribute templateFix_Heading5.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_Heading5"
+'
+' templateFix_Heading5 Macro
+'
+'
+    With ActiveDocument.Styles("Heading 5").Font
+        .Name = "+Headings"
+        .Size = 10
+        .Bold = True
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = -721354753
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Headings CS"
+        .BoldBi = False
+        .ItalicBi = False
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("Heading 5").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(1.5)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 16
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 0
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = True
+        .KeepTogether = True
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(-1.5)
+        .OutlineLevel = wdOutlineLevel5
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("Heading 5").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("Heading 5")
         .AutomaticallyUpdate = False
         .BaseStyle = "Normal"
         .NextParagraphStyle = "Body Text"
