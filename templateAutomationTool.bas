@@ -6,7 +6,7 @@ Sub runTemplateFix()
 '
 
 ' Introduction
-MsgBox "You have selected the Aurecon Template Automation Tool V0.1.4 . Please click Ok to run"
+MsgBox "You have selected the Aurecon Template Automation Tool Ver 0.1.6 . Please click Ok to run"
 
 ' Body Text
 templateFix_Body
@@ -28,6 +28,8 @@ templateFix_Bullet3
 ' General
 templateFix_Footer
 templateFix_FooterText
+templateFix_NoSpacing
+templateFix_Normal
 
 ' Final Message
 MsgBox "Aurecon Template Automation Tool has finished. Please direct any feedback to David.Petrie@aurecongroup.com"
@@ -987,6 +989,152 @@ Attribute templateFix_Heading7.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.te
     With ActiveDocument.Styles("Heading 7")
         .AutomaticallyUpdate = False
         .BaseStyle = "Normal"
+        .NextParagraphStyle = "Normal"
+    End With
+End Sub
+Sub templateFix_NoSpacing()
+Attribute templateFix_NoSpacing.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_NoSpacing"
+'
+' templateFix_NoSpacing Macro
+'
+'
+    With ActiveDocument.Styles("No Spacing").Font
+        .Name = "+Body"
+        .Size = 10
+        .Bold = False
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = wdColorAutomatic
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Body CS"
+        .BoldBi = False
+        .ItalicBi = False
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("No Spacing").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(0)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 0
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 0
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = False
+        .KeepTogether = False
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(0)
+        .OutlineLevel = wdOutlineLevelBodyText
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("No Spacing").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("No Spacing")
+        .AutomaticallyUpdate = False
+        .BaseStyle = "Normal"
+        .NextParagraphStyle = "No Spacing"
+    End With
+End Sub
+Sub templateFix_Normal()
+Attribute templateFix_Normal.VB_ProcData.VB_Invoke_Func = "Normal.NewMacros.templateFix_Normal"
+'
+' templateFix_Normal Macro
+'
+'
+    With ActiveDocument.Styles("Normal").Font
+        .Name = "+Body"
+        .Size = 10
+        .Bold = False
+        .Italic = False
+        .Underline = wdUnderlineNone
+        .UnderlineColor = wdColorAutomatic
+        .StrikeThrough = False
+        .DoubleStrikeThrough = False
+        .Outline = False
+        .Emboss = False
+        .Shadow = False
+        .Hidden = False
+        .SmallCaps = False
+        .AllCaps = False
+        .Color = wdColorAutomatic
+        .Engrave = False
+        .Superscript = False
+        .Subscript = False
+        .Scaling = 100
+        .Kerning = 0
+        .Animation = wdAnimationNone
+        .SizeBi = 11
+        .NameBi = "+Body CS"
+        .BoldBi = False
+        .ItalicBi = False
+        .Ligatures = wdLigaturesNone
+        .NumberSpacing = wdNumberSpacingDefault
+        .NumberForm = wdNumberFormDefault
+        .StylisticSet = wdStylisticSetDefault
+        .ContextualAlternates = 0
+    End With
+    With ActiveDocument.Styles("Normal").ParagraphFormat
+        .LeftIndent = CentimetersToPoints(0)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBefore = 0
+        .SpaceBeforeAuto = False
+        .SpaceAfter = 0
+        .SpaceAfterAuto = False
+        .LineSpacingRule = wdLineSpaceSingle
+        .Alignment = wdAlignParagraphLeft
+        .WidowControl = True
+        .KeepWithNext = False
+        .KeepTogether = False
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(0)
+        .OutlineLevel = wdOutlineLevelBodyText
+        .CharacterUnitLeftIndent = 0
+        .CharacterUnitRightIndent = 0
+        .CharacterUnitFirstLineIndent = 0
+        .LineUnitBefore = 0
+        .LineUnitAfter = 0
+        .MirrorIndents = False
+        .TextboxTightWrap = wdTightNone
+        .CollapsedByDefault = False
+        .ReadingOrder = wdReadingOrderLtr
+    End With
+    ActiveDocument.Styles("Normal").NoSpaceBetweenParagraphsOfSameStyle = _
+        False
+    With ActiveDocument.Styles("Normal")
+        .AutomaticallyUpdate = False
+        .BaseStyle = ""
         .NextParagraphStyle = "Normal"
     End With
 End Sub
